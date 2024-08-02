@@ -1,0 +1,27 @@
+{
+  "name": "crud_operation_hapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyasingh890/crud_operation_hapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priyasingh890/crud_operation_hapi/issues"
+  },
+  "homepage": "https://github.com/priyasingh890/crud_operation_hapi#readme",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.10",
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "objection": "^3.1.4",
+    "pg": "^8.12.0"
+  }
+}
