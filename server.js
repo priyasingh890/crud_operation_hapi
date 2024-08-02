@@ -1,18 +1,25 @@
 
 const Hapi = require('@hapi/hapi');
+const db = require('./src/config/db');
+const userRoutes = require('./src/routes/userRoutes');
 
 const init = async () => {
-    try {
-        const server = Hapi.server({
-            port: 3001,
-            host: 'localhost'
-        });
+  const server = Hapi.server({
+    port: 3001,
+    host: 'localhost'
+  });
+  console.log(server,"siya")
 
-        await server.start();
-        console.log('Server running on %s', server.info.uri);
-    } catch (err) {
-        console.error('Error starting server:', err);
-    }
+  server.route(userRoutes);
+  console.log(server.route(userRoutes),"raja")
+
+  await server.start();
+  console.log('Server running on %s', server.info.uri);
 };
+
+process.on('unhandledRejection', (err) => {
+  console.log(err);
+  process.exit(1);
+});
 
 init();
