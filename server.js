@@ -11,7 +11,7 @@ const init = async () => {
   console.log(server,"siya")
 
   server.route(userRoutes);
-  console.log(server.route(userRoutes),"raja")
+  
 
   await server.start();
   console.log('Server running on %s', server.info.uri);
